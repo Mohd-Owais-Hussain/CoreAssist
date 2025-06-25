@@ -1,0 +1,104 @@
+.Navbar {
+  height: 45px;
+  font-weight: 500;
+  background-color: var(--accent-color);
+  z-index: 99;
+  position: sticky;
+  top: 0;
+}
+
+.container {
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-inline: 30px;
+}
+
+.banner {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  left: 50%;
+  font-size: 1.2rem;
+  transform: translateX(-50%);
+}
+
+.menu-item {
+  padding-inline: 10px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  outline: 2px solid white;
+}
+
+.right-side {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-btn {
+  color: white;
+  background-color: #242424;
+  border: none;
+  font-size: 1.2rem;
+  padding: 6px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-inline: 10px;
+  }
+
+  .banner {
+    font-size: 1.25rem;
+  }
+
+  .menu {
+    gap: 8px;
+    font-size: 0.9rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu-item {
+    padding: 2px;
+  }
+
+  .contact-btn {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menu {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+    font-size: 1.7rem;
+    align-items: center;
+  }
+}

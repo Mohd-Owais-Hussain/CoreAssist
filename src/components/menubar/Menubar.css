@@ -1,0 +1,88 @@
+.Menubar {
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu-content {
+  height: 100%;
+  width: 250px;
+  background-color: white;
+  transform: translateX(100%);
+  padding: 8px;
+  animation: MenubarSlider 0.4s forwards;
+}
+
+.header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  justify-content: space-between;
+}
+
+.heading {
+  color: var(--accent-color);
+}
+
+.close-btn {
+  display: flex;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+.go-to {
+  list-style: none;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.section {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 4px 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 4px 2px black;
+  transition: all 0.1s;
+}
+
+.category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 7px 2px black;
+  background-color: #a52bde;
+}
+
+.category:active {
+  transform: translateY(0px);
+  box-shadow: 0px 4px 2px black;
+  background-color: var(--accent-color);
+}
+
+@keyframes MenubarSlider {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
